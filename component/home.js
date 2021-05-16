@@ -32,7 +32,7 @@ import { getHomeList } from '../store/home/actions'
 import React, { useEffect } from "react";
 import Login from './Login'
 // import styles from './home.less';
-import './home.less';
+// import './home.less';
 
 class Home extends React.Component{
     /*UNSAFE_componentWillMount(){
@@ -64,9 +64,12 @@ class Home extends React.Component{
             <div>
                 <div className="title">This is home</div>
                 <div> {!!props.home.list.length && props.home.list.map(item => <div key={item}>{item}</div>)} </div>
-                <button onClick={() => props.getHomeList()}>click me</button>
+                <button onClick={() => {
+                    props.getHomeList();
+                    console.log('props.home.list', props.home.list);
+                }}>click me</button>
                 <div><button className="alert-me" onClick={() => alert('hhhhhh')}>alert</button></div>
-                <Login />
+                {/*<Login />*/}
             </div>
         )
     }

@@ -13,17 +13,17 @@ const clientConfig = {
         path: path.resolve(__dirname, 'dist'),
         publicPath: ''
     },
-   /* module: {
+    module: {
         rules: [
-            /!*{
+            /*{
                 test: /\.less/,
                 use: ['style-loader', {
                     loader: 'css-loader',
                     // options: { modules: true }
                 }, 'less-loader'],
-            }*!/
+            }*/
         ],
-    },*/
+    },
     /*plugins: [new AssetsManifestPlugin({
         filename: 'asserts.json',
         minify: true

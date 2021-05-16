@@ -12,7 +12,7 @@ const serverConfig = {
         path: path.resolve(__dirname, 'build')
     },
     externals: [nodeExternals()],
-    /*module: {
+    module: {
         rules: [
             {
                 test: /\.less/,
@@ -22,7 +22,7 @@ const serverConfig = {
                 }, 'less-loader'],
             }
         ],
-    }*/
+    }
 }
 
 module.exports = merge(config, serverConfig);
